@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+	<description>
+       Servlets for an online store web application.
+    </description>
+	<display-name>Online store</display-name>
+
+	<servlet>	
+		<servlet-name>KidsBooksPage</servlet-name>
+		<servlet-class>coreservlets.KidsBooksPage</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>TechBooksPage</servlet-name>
+		<servlet-class>coreservlets.TechBooksPage</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>OrderPage</servlet-name>
+		<servlet-class>coreservlets.OrderPage</servlet-class>
+	</servlet>
+
+    <servlet>
+        <servlet-name>WelcomePage</servlet-name>
+        <servlet-class>coreservlets.WelcomePage</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>CheckoutPage</servlet-name>
+        <servlet-class>coreservlets.CheckoutPage</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>WelcomePage</servlet-name>
+        <url-pattern></url-pattern>
+    </servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>KidsBooksPage</servlet-name>
+		<url-pattern>/kidsBooksPage</url-pattern>
+	</servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CheckoutPage</servlet-name>
+        <url-pattern>/checkout</url-pattern>
+    </servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>TechBooksPage</servlet-name>
+		<url-pattern>/techBooksPage</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>OrderPage</servlet-name>
+		<url-pattern>/orderPage</url-pattern>
+	</servlet-mapping>
+</web-app>
