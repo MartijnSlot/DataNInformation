@@ -136,7 +136,7 @@ public void doGet(HttpServletRequest request,
            "<FORM ACTION=\"" + checkoutURL + "\">\n" +
            "<BIG><CENTER>\n" +
            "<INPUT TYPE=\"SUBMIT\"\n" +
-           "       VALUE=\"Pay and Proceed to Checkout\">\n" +
+           "       VALUE=\"Betalen en naar de Checkout\">\n" +
            "</CENTER></BIG></FORM>");
       }
 
@@ -147,7 +147,7 @@ public void doGet(HttpServletRequest request,
                 "<FORM ACTION=\" " + homeURL + " \">\n "
                 + "<BIG><CENTER>\n"
                 + "<INPUT TYPE=\"SUBMIT\" "
-                + "VALUE=\"To home\">\n"
+                + "VALUE=\"Verder shoppen\">\n"
                 + "</CENTER>\n</BIG>\n</FORM>");
 
       out.println("</BODY></HTML>");

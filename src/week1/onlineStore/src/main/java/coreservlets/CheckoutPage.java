@@ -26,13 +26,12 @@ public class CheckoutPage extends HttpServlet {
         body = null;
     }
 
-    public void doGet(HttpServletRequest request,
-                      HttpServletResponse response) {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) {
         response.setContentType("text/html");
         HttpSession session = request.getSession();
         ShoppingCart cart = (ShoppingCart) session.getAttribute("shoppingCart");
         String totalCost = getTotalPayment(cart);
-        body = "Bedankt for die blumen. <br /> The damage is: " + totalCost;
+        body = "Bedankt for die blumen. <br /> Te betalen: " + totalCost;
         emptyCart(cart);
 
         PrintWriter out = null;
@@ -55,14 +54,12 @@ public class CheckoutPage extends HttpServlet {
         formURL = response.encodeURL(formURL);
         out.println("<FORM ACTION=\" " + formURL + " \">\n "
                 + "<INPUT TYPE=\"SUBMIT\" "
-                + "VALUE=\"To stopping cart\">\n"
-                + "</CENTER>\n<P>\n</FORM>");
+                + "VALUE=\"To stopping cart\">\n</CENTER>\n<P>\n</FORM>");
         String homeURL = "";
         // Pass URLs that reference own site through encodeURL.
         homeURL = response.encodeURL(homeURL);
         out.println("<FORM ACTION=\" " + homeURL + " \">\n "
-                + "<INPUT TYPE=\"SUBMIT\" "
-                + "VALUE=\"To home\">\n"
+                + "<INPUT TYPE=\"SUBMIT\" VALUE=\"To home\">\n"
                 + "</CENTER>\n<P>\n</FORM>");
 
         out.print("</body>");
